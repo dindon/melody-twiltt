@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>TWILTT: Home</title>
+		<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+		<script type="text/javascript" src="js/twiltt_lend.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	
+	<body>
+		<h2>TWILTT: The best thing to remember where is your stuff</h2>
+
+		<div ng-controller="LendCtrl">
+			<ul class="unstyled">
+				<li ng-repeat="lend in lends">{{lend.text}} to <b>{{lend.who}}</b></li>
+			</ul>
+
+			<form ng-submit="addLend()" class="form-horizontal">
+				<input type="text" ng-model="lendText" placeholder="add a new lend">
+				<input type="text" ng-model="lendWho" placeholder="to whom?">
+				<button class="btn"><i class="icon-plus"></i>Add</button>
+			</form>
+
+		</div>
+
+	</body>
+</html>
