@@ -11,7 +11,7 @@ twiltt.controller('TwilttCtrl', function TwilttCtrl($scope, twilttStorage){
 		$scope.lendWho = '';
 	};
 
-	$scope.deleteLend = function(){
-
+	$scope.deleteLend = function(lend){
+		lends.splice(lends.indexOf(lend),1);
 	};
 });

@@ -10,7 +10,10 @@
 
 		<div ng-controller="TwilttCtrl">
 			<ul class="unstyled">
-				<li ng-repeat="lend in lends">{{lend.text}} to <b>{{lend.who}}</b></li>
+				<li ng-repeat="lend in lends">
+					{{lend.text}} to <b>{{lend.who}}</b>
+					<button ng-click="deleteLend(lend)" class="btn"><i class="icon-remove"></i></button>
+				</li>
 			</ul>
 
 			<form ng-submit="addLend()" class="form-horizontal">
