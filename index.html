@@ -1,16 +1,14 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="twiltt">
 	<head>
 		<title>TWILTT: Home</title>
-		<script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
-		<script type="text/javascript" src="js/twiltt_lend.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	</head>
 	
 	<body>
 		<h2>TWILTT: The best thing to remember where is your stuff</h2>
 
-		<div ng-controller="LendCtrl">
+		<div ng-controller="TwilttCtrl">
 			<ul class="unstyled">
 				<li ng-repeat="lend in lends">{{lend.text}} to <b>{{lend.who}}</b></li>
 			</ul>
@@ -22,6 +20,11 @@
 			</form>
 
 		</div>
-
+	
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/twilttApp.js"></script>
+	<script type="text/javascript" src="js/twilttController.js"></script>
+	<script type="text/javascript" src="js/twilttStorage.js"></script>
+	
 	</body>
 </html>
