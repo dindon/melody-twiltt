@@ -2,7 +2,9 @@
 <html ng-app="twiltt">
 	<head>
 		<title>TWILTT: Home</title>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/base.css">
+		<style>[ng\:cloak], [ng-cloak], .ng-cloak {display: none;}</style>
 	</head>
 	
 	<body>
@@ -10,9 +12,9 @@
 
 		<div ng-controller="TwilttCtrl">
 			<ul class="unstyled">
-				<li ng-repeat="lend in lends">
+				<li ng-repeat="lend in lends" class="lend">
 					{{lend.text}} to <b>{{lend.who}}</b>
-					<button ng-click="deleteLend(lend)" class="btn"><i class="icon-remove"></i></button>
+					<button ng-click="deleteLend(lend)" class="btn remove"><i class="icon-remove"></i></button>
 				</li>
 			</ul>
 

@@ -1,0 +1,10 @@
+.lend .remove
+{
+	display: none;
+}
+
+.lend:hover .remove
+{
+	display: inline;
+}
+
