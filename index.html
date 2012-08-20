@@ -19,13 +19,12 @@
 				<button class="btn"><i class="icon-plus"></i>Add</button>
 			</form>
 
-
 			<ul class="unstyled">
 				<li ng-repeat="lend in lends" class="lend" ng-cloak ng-dblclick="editLend(lend)">
 					
 					<div class="">
 						{{lend.text}} to <b>{{lend.who}}</b>
-						<button ng-click="deleteLend(lend)" class="btn remove"><i class="icon-remove"></i></button>
+						<button ng-click="deleteLend(lend)" class="btn remove" ng-class="{'no-ninja': lend == editedLend}"><i class="icon-remove"></i></button>
 					</div>
 					
 					<form ng-submit="" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
@@ -36,7 +35,6 @@
 				</li>
 			</ul>
 
-			
 		</div>
 	
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>

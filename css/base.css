@@ -18,3 +18,13 @@
 	display: block;
 }
 
+.lend .remove edit-form:visible
+{
+	display: block;
+}
+
+.lend .remove.no-ninja
+{
+	display: inline;
+}
+
