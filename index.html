@@ -11,12 +11,7 @@
 		<h2>TWILTT: The best thing to remember where is your stuff</h2>
 
 		<div ng-controller="TwilttCtrl">
-			<ul class="unstyled">
-				<li ng-repeat="lend in lends" class="lend">
-					{{lend.text}} to <b>{{lend.who}}</b>
-					<button ng-click="deleteLend(lend)" class="btn remove"><i class="icon-remove"></i></button>
-				</li>
-			</ul>
+			
 
 			<form ng-submit="addLend()" class="form-horizontal">
 				<input type="text" ng-model="lendText" placeholder="add a new lend">
@@ -24,6 +19,24 @@
 				<button class="btn"><i class="icon-plus"></i>Add</button>
 			</form>
 
+
+			<ul class="unstyled">
+				<li ng-repeat="lend in lends" class="lend" ng-cloak ng-dblclick="editLend(lend)">
+					
+					<div class="">
+						{{lend.text}} to <b>{{lend.who}}</b>
+						<button ng-click="deleteLend(lend)" class="btn remove"><i class="icon-remove"></i></button>
+					</div>
+					
+					<form ng-submit="" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
+						<input type="text" class="" ng-model="lend.text">
+						<input type="text" class="" ng-model="lend.who">
+						<button class="btn" ng-click="dismissEditForm()"><i class="icon-ban-circle"></i></button>
+					</form>
+				</li>
+			</ul>
+
+			
 		</div>
 	
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>

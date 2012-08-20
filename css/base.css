@@ -8,3 +8,13 @@
 	display: inline;
 }
 
+.lend .edit-form
+{
+	display: none;
+}
+
+.lend .edit-form.editing
+{
+	display: block;
+}
+
