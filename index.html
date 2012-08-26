@@ -18,7 +18,7 @@
 
 				<form ng-submit="addLend()" class="form-inline">
 					<input type="text" ng-model="lendText" placeholder="add a new lend" required>
-					<input type="text" ng-model="lendWho" placeholder="to whom?" required>
+					<input type="text" ng-model="lendWho" placeholder="to whom?" required autocomplete>
 					<button class="btn btn-primary"><i class="icon-plus"></i>Add</button>
 				</form>
 
@@ -49,6 +49,7 @@
 		<script type="text/javascript" src="js/twilttApp.js"></script>
 		<script type="text/javascript" src="js/twilttController.js"></script>
 		<script type="text/javascript" src="js/twilttStorage.js"></script>
+		<script type="text/javascript" src="js/twilttDirective.js"></script>
 	
 	</body>
 </html>
