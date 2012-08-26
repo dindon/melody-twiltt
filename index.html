@@ -17,8 +17,8 @@
 				
 
 				<form ng-submit="addLend()" class="form-inline">
-					<input type="text" ng-model="lendText" placeholder="add a new lend" autofocus>
-					<input type="text" ng-model="lendWho" placeholder="to whom?">
+					<input type="text" ng-model="lendText" placeholder="add a new lend" required>
+					<input type="text" ng-model="lendWho" placeholder="to whom?" required>
 					<button class="btn btn-primary"><i class="icon-plus"></i>Add</button>
 				</form>
 
@@ -30,10 +30,10 @@
 								<button ng-click="deleteLend(lend)" class="btn remove" ng-class="{'no-ninja': lend == editedLend}"><i class="icon-remove"></i></button>
 							</div>
 							
-							<form ng-submit="" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
-								<input type="text" class="" ng-model="lend.text">
-								<input type="text" class="" ng-model="lend.who">
-								<button class="btn" ng-click="dismissEditForm()"><i class="icon-ban-circle"></i></button>
+							<form ng-submit="dismissEditForm()" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
+								<input type="text" class="" ng-model="lend.text" required>
+								<input type="text" class="" ng-model="lend.who" required>
+								<button class="btn"><i class="icon-ban-circle"></i></button>
 							</form>
 						</div>	
 					</li>
