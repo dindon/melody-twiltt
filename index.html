@@ -8,39 +8,42 @@
 	</head>
 	
 	<body>
-		<h2>TWILTT: The best thing to remember where is your stuff</h2>
+		<div class="container">
+			<h2>TWILTT: The best thing to remember where is your stuff</h2>
 
-		<div ng-controller="TwilttCtrl">
-			
+			<div ng-controller="TwilttCtrl">
+				
 
-			<form ng-submit="addLend()" class="form-horizontal">
-				<input type="text" ng-model="lendText" placeholder="add a new lend">
-				<input type="text" ng-model="lendWho" placeholder="to whom?">
-				<button class="btn"><i class="icon-plus"></i>Add</button>
-			</form>
+				<form ng-submit="addLend()" class="form-inline">
+					<input type="text" ng-model="lendText" placeholder="add a new lend" autofocus>
+					<input type="text" ng-model="lendWho" placeholder="to whom?">
+					<button class="btn btn-primary"><i class="icon-plus"></i>Add</button>
+				</form>
 
-			<ul class="unstyled">
-				<li ng-repeat="lend in lends" class="lend" ng-cloak ng-dblclick="editLend(lend)">
-					
-					<div class="">
-						{{lend.text}} to <b>{{lend.who}}</b>
-						<button ng-click="deleteLend(lend)" class="btn remove" ng-class="{'no-ninja': lend == editedLend}"><i class="icon-remove"></i></button>
-					</div>
-					
-					<form ng-submit="" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
-						<input type="text" class="" ng-model="lend.text">
-						<input type="text" class="" ng-model="lend.who">
-						<button class="btn" ng-click="dismissEditForm()"><i class="icon-ban-circle"></i></button>
-					</form>
-				</li>
-			</ul>
+				<ul class="unstyled">
+					<li ng-repeat="lend in lends" class="lend" ng-cloak ng-dblclick="editLend(lend)">
+						<div>
+							<div class="">
+								{{lend.text}} to <b>{{lend.who}}</b>
+								<button ng-click="deleteLend(lend)" class="btn remove" ng-class="{'no-ninja': lend == editedLend}"><i class="icon-remove"></i></button>
+							</div>
+							
+							<form ng-submit="" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
+								<input type="text" class="" ng-model="lend.text">
+								<input type="text" class="" ng-model="lend.who">
+								<button class="btn" ng-click="dismissEditForm()"><i class="icon-ban-circle"></i></button>
+							</form>
+						</div>	
+					</li>
+				</ul>
 
+			</div>
 		</div>
-	
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/twilttApp.js"></script>
-	<script type="text/javascript" src="js/twilttController.js"></script>
-	<script type="text/javascript" src="js/twilttStorage.js"></script>
+
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/twilttApp.js"></script>
+		<script type="text/javascript" src="js/twilttController.js"></script>
+		<script type="text/javascript" src="js/twilttStorage.js"></script>
 	
 	</body>
 </html>
