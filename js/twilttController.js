@@ -5,6 +5,7 @@ twiltt.controller('TwilttCtrl', function TwilttCtrl($scope, twilttStorage){
 
 	$scope.editedLend = null;
 
+
 	$scope.$watch('lends', function() {
 		twilttStorage.putLends(lends);
 	}, true);

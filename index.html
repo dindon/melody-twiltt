@@ -18,7 +18,12 @@
 
 				<form ng-submit="addLend()" class="form-inline">
 					<input type="text" ng-model="lendText" placeholder="add a new lend" required>
-					<input type="text" ng-model="lendWho" placeholder="to whom?" required autocomplete>
+					<input type="text" ng-model="lendWho" placeholder="to whom?" required autocomplete class="input-whom">
+					<ul class="autocomplete-container unstyled">
+						<li>test1</li>
+						<li>test2</li>
+						<li>test3</li>
+					</ul>
 					<button class="btn btn-primary"><i class="icon-plus"></i>Add</button>
 				</form>
 

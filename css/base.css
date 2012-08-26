@@ -27,3 +27,13 @@
 {
 	line-height: 30px;
 }
+
+.autocomplete-container
+{
+	display: none;
+}
+
+.input-whom:focus+.autocomplete-container
+{
+	display: block;
+}
