@@ -8,10 +8,12 @@
 	</head>
 	
 	<body>
-		<div class="container">
-			<h2>TWILTT: The best thing to remember where is your stuff</h2>
+		<div class="container modal">
+			<div class="modal-header">
+				<h3>TWILTT: The best thing to remember where is your stuff</h3>
+			</div>
 
-			<div ng-controller="TwilttCtrl">
+			<div ng-controller="TwilttCtrl" class="modal-body">
 				
 
 				<form ng-submit="addLend()" class="form-inline">
@@ -38,6 +40,9 @@
 				</ul>
 
 			</div>
+
+			<div class="modal-footer">&pi; x 13,37 = 42</div>
+
 		</div>
 
 		<script type="text/javascript" src="js/lib/angular.min.js"></script>
