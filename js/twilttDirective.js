@@ -2,6 +2,8 @@ twiltt.directive('autocomplete',function($document) {
 	
 	var $list = angular.element($document.find('ul')[0]);
 
+	alert($list);
+
 	return function(scope, element, attr){
 		element.bind('focus', function(){	
 			element.bind('blur', blur);

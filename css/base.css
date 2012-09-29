@@ -28,7 +28,7 @@
 	line-height: 30px;
 }
 
-.autocomplete-container
+/*.autocomplete-container
 {
 	display: none;
 }
@@ -36,4 +36,4 @@
 .input-whom:focus+.autocomplete-container
 {
 	display: block;
-}
+}*/
