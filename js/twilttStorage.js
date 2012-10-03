@@ -11,11 +11,11 @@ twiltt.factory('twilttStorage', function(){
 			localStorage.setItem(STORAGE_ID + '_lends', JSON.stringify(lends));
 		},
 
-		getPeople: function(){
+		getPeople: function() {
 			return JSON.parse(localStorage.getItem(STORAGE_ID + '_people') || '[]');
 		},
 
-		putPeople: function(people){
+		putPeople: function(people) {
 			localStorage.setItem(STORAGE_ID + '_people', JSON.stringify(people));
 		}
 	};

@@ -1,6 +1,5 @@
 twiltt.controller('TwilttCtrl', function TwilttCtrl($scope, twilttStorage){
 	var lends = $scope.lends = twilttStorage.getLends();
-	//var people = $scope.people = twilttStorage.getPeople();
 	var people = $scope.people = twilttStorage.getPeople();
 
 	$scope.editedLend = null;
