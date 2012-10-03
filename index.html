@@ -1,60 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="twiltt">
 	<head>
-		<title>TWILTT: Home</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/twiltt.css">
 		<style>[ng\:cloak], [ng-cloak], .ng-cloak {display: none;}</style>
 	</head>
-	
 	<body>
-		<div class="container modal">
-			<div class="modal-header">
-				<h3>TWILTT: The best thing to remember where is your stuff</h3>
-			</div>
 
-			<div ng-controller="TwilttCtrl" class="modal-body">
-				
+		<melody-twiltt></melody-twiltt>
 
-				<form ng-submit="addLend()" class="form-inline">
-					<input type="text" ng-model="lendText" placeholder="add a new lend" required>
-					<input type="text" ng-model="lendWho" placeholder="to whom?" required class="input-whom">
-					<!-- <ul class="autocomplete-container unstyled">
-						<li>test1</li>
-						<li>test2</li>
-						<li>test3</li>
-					</ul> -->
-					<button class="btn btn-primary"><i class="icon-plus"></i>Add</button>
-				</form>
-
-				<ul class="unstyled">
-					<li ng-repeat="lend in lends" class="lend" ng-cloak ng-dblclick="editLend(lend)">
-						<div>
-							<div class="">
-								{{lend.text}} to <b>{{lend.who}}</b>
-								<button ng-click="deleteLend(lend)" class="btn remove" ng-class="{'no-ninja': lend == editedLend}"><i class="icon-remove"></i></button>
-							</div>
-							
-							<form ng-submit="dismissEditForm()" class="form-horizontal edit-form" ng-class="{editing: lend == editedLend}">
-								<input type="text" class="" ng-model="lend.text" required>
-								<input type="text" class="" ng-model="lend.who" required>
-								<button class="btn"><i class="icon-ban-circle"></i></button>
-							</form>
-						</div>	
-					</li>
-				</ul>
-
-			</div>
-
-			<div class="modal-footer">&pi; x 13,37 = 42</div>
-
-		</div>
 
 		<script type="text/javascript" src="js/lib/angular.min.js"></script>
-		<script type="text/javascript" src="js/twilttApp.js"></script>
-		<script type="text/javascript" src="js/twilttController.js"></script>
-		<script type="text/javascript" src="js/twilttStorage.js"></script>
-		<script type="text/javascript" src="js/twilttDirective.js"></script>
-	
+		<script type="text/javascript" src="js/twiltt.js"></script>
 	</body>
 </html>
